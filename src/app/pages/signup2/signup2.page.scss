@@ -1,0 +1,57 @@
+.bars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.bar {
+    background-color: white;
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+
+.sel {
+    background-color: rgb(115, 228, 115);
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+}
+
+.label {
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.buttons {
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+ion-button {
+    --background: white;
+    border: 1px solid gray;
+    color: black !important;
+    margin-top: 20px;
+    height: 30px;
+    width: 250px;
+    text-transform:none!important;
+    margin: 20px;
+}

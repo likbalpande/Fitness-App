@@ -1,0 +1,84 @@
+.bars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.bar {
+  background-color: white;
+  width: 10%;
+  height: 5px;
+  margin: 0 auto;
+  border: 1px solid gray;
+}
+
+.sel {
+  background-color: rgb(115, 228, 115);
+  width: 10%;
+  height: 5px;
+  margin: 0 auto;
+}
+
+.label {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-left: 10px;
+  border: 1px solid gray;
+  border-right: 1px solid white;
+  height: 30px;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-input {
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-left: 1px solid white;
+  text-align: center;
+  margin-top: 20px;
+  width: 250px;
+  height: 30px;
+  --placeholder-color: black;
+  --placeholder-opacity: 1;
+}
+
+.item1 {
+  padding-top: 10px;
+}
+
+.item2 {
+  padding-top: 40px;
+}
+
+.label1 {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.username {
+  border: 1px solid gray;
+}
+
+.congrats {
+  padding-left:4%;
+}
+
+.bottombttn{
+  margin-top:85%;
+  text-align: center;
+}
+
+.bttn{
+  --border-color:rgb(156, 153, 153);
+}

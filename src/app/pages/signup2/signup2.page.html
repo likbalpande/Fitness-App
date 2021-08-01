@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-icon
+        name="chevron-back-circle-outline"
+        size="large"
+        [routerLink]="['/signup1']"
+        routerDirection="back"
+      ></ion-icon>
+    </ion-buttons>
+    <ion-title><b>Activity Level</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon
+        name="chevron-forward-circle-outline"
+        size="large"
+        [routerLink]="['/signup3']"
+        routerDirection="forward"
+      ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bars">
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ion-item lines="none" style="text-align: center;">
+    <div class="container">
+      <ion-label class="label"><b>How active are you?</b></ion-label>
+    <div class="buttons">
+      <ion-button (click)="active1()" class="btn"><b>Not Very Active</b></ion-button>
+      <ion-button (click)="active2()" class="btn"><b>Lightly Active</b></ion-button>
+      <ion-button (click)="active3()" class="btn"><b>Active</b></ion-button>
+      <ion-button (click)="active4()" class="btn"><b>Very Active</b></ion-button>
+    </div>
+    </div>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calorie Input</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="signup8"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment >
+    <ion-segment-button [routerLink]="['/food']" value="food">
+      <ion-label>Food</ion-label>
+    </ion-segment-button>
+    <ion-segment-button [routerLink]="['/move']" value="move">
+      <ion-label>Move</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="exercise">
+      <ion-label>Exercise</ion-label>
+    </ion-segment-button>
+    <ion-segment-button [routerLink]="['/stand']" value="stand">
+      <ion-label>Stand</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

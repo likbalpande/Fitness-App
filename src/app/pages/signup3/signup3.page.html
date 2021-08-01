@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-icon
+        name="chevron-back-circle-outline"
+        size="large"
+        [routerLink]="['/signup2']"
+        routerDirection="back"
+      ></ion-icon>
+    </ion-buttons>
+    <ion-title><b>You</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon
+        name="chevron-forward-circle-outline"
+        size="large"
+        [routerLink]="['/signup4']"
+        routerDirection="forward"
+      ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bars">
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ion-item lines="none" style="text-align: center;">
+    <div class="container">
+      <ion-label class="label"><b>Sex</b></ion-label>
+    <div class="gender">
+      <ion-button (click)="male()" class="gbtn"><b>Male</b></ion-button>
+      <ion-button (click)="female()" class="gbtn"><b>Female</b></ion-button>
+    </div>
+    <ion-label class="label"><b>When were you born?</b></ion-label>
+    <div class="bday">
+      <ion-item lines="none">
+        <ion-datetime class="date" displayFormat="DD MMMM YYYY" min="1994-03-14" max="2012-12-09" value="2003-06-17T15:03:46.789"></ion-datetime>
+      </ion-item>
+    </div>
+    <ion-label class="label"><b>Where do you live?</b></ion-label>
+    <div class="place">
+      <ion-item lines="none">
+        <ion-input placeholder="Country"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+  </ion-item>
+</ion-content>

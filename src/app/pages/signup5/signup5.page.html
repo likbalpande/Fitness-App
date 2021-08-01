@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-icon
+        name="chevron-back-circle-outline"
+        size="large"
+        [routerLink]="['/signup4']"
+        routerDirection="back"
+      ></ion-icon>
+    </ion-buttons>
+    <ion-title><b>You</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon
+        name="chevron-forward-circle-outline"
+        size="large"
+        [routerLink]="['/signup6']"
+        routerDirection="forward"
+      ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bars">
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ion-item lines="none" style="text-align: center; width: 100%;">
+    <div class="container">
+      <ion-label class="label"><b>Goal Weight</b></ion-label>
+      <ion-item lines="none">
+        <ion-input placeholder="in Kg" type="number"></ion-input>
+      </ion-item>
+      <ion-label class="label" text-wrap><b>What is your weekly goal?</b></ion-label>
+      <ion-item lines="none">
+        <ion-input placeholder="Gain 0.5 kg a week" type="number"></ion-input>
+      </ion-item>
+    </div>
+  </ion-item>
+</ion-content>

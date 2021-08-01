@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calorie Input</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="signup8"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div padding>
+    <ion-segment [(ngModel)]="task">
+      <ion-segment-button value="food">
+        Food
+      </ion-segment-button>
+      <ion-segment-button value="move">
+        Move
+      </ion-segment-button>
+      <ion-segment-button value="exercise">
+        Exercise
+      </ion-segment-button>
+      <ion-segment-button value="stand">
+        Stand
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+    <!-- ....................................................................... -->
+
+  <div [ngSwitch]="task">
+    <ion-list *ngSwitchCase="'food'">
+      <h3 class="heading">Add Food Details</h3>
+      <ion-row style="height:5px;"></ion-row>
+      <ion-item>
+        <ion-label position="absolute">Food Item :</ion-label>
+        <ion-input placeholder="Banana" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Calorie Intake :</ion-label>
+        <ion-input type="number" placeholder="89" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Location :</ion-label>
+        <ion-input placeholder="Supermarket" value=""></ion-input>
+      </ion-item>
+
+      <ion-row style="height:21px;"></ion-row>
+      <div class="heading"><ion-button>Add Food</ion-button></div>
+    </ion-list>
+
+    <!-- ....................................................................... -->
+
+    <ion-list *ngSwitchCase="'move'">
+      <h3 class="heading">Add Movement Details</h3>
+      <ion-row style="height:5px;"></ion-row>
+      <ion-item>
+        <ion-label position="absolute">Movement Type :</ion-label>
+        <ion-select placeholder="Select from the list">
+          <ion-select-option value="f">Walking</ion-select-option>
+          <ion-select-option value="m">Running</ion-select-option>
+          <ion-select-option value="m">Cycling</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Calorie Burnt :</ion-label>
+        <ion-input type="number" placeholder="89" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Location :</ion-label>
+        <ion-input placeholder="Supermarket" value=""></ion-input>
+      </ion-item>
+
+      <ion-row style="height:21px;"></ion-row>
+      <div class="heading"><ion-button>Add Movement</ion-button></div>
+    </ion-list>
+    <!-- ....................................................................... -->
+
+    <ion-list *ngSwitchCase="'exercise'">
+      <h3 class="heading">Add Exercise Details</h3>
+      <ion-row style="height:5px;"></ion-row>
+      <ion-item>
+        <ion-label position="absolute">Exercise Type :</ion-label>
+        <ion-input placeholder="Skipping" value=""></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Calorie Burnt :</ion-label>
+        <ion-input type="number" placeholder="76" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Time Spent :</ion-label>
+        <ion-input type="number" placeholder="(in minutes)" value=""></ion-input>
+      </ion-item>
+
+      <ion-row style="height:21px;"></ion-row>
+      <div class="heading"><ion-button>Add Exercise</ion-button></div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'stand'">
+      <h3 class="heading">Add Stand Details</h3>
+      <ion-row style="height:5px;"></ion-row>
+      <ion-item>
+        <ion-label position="absolute">Location :</ion-label>
+        <ion-input placeholder="Terrace" value=""></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Calorie Burnt :</ion-label>
+        <ion-input type="number" placeholder="21" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="absolute">Time Spent :</ion-label>
+        <ion-input type="number" placeholder="(in minutes)" value=""></ion-input>
+      </ion-item>
+
+      <ion-row style="height:21px;"></ion-row>
+      <div class="heading"><ion-button>Add Stand</ion-button></div>
+    </ion-list>
+  </div>
+</ion-content>

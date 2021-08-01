@@ -1,0 +1,82 @@
+.bars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.bar {
+    background-color: white;
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+
+.sel {
+    background-color: rgb(115, 228, 115);
+    width: 10%;
+    height: 5px;
+    margin: 0 auto;
+}
+
+ion-button {
+    --background: white;
+    border: 1px solid gray;
+    color: black !important;
+    margin-top: 20px;
+    height: 30px;
+    width: 250px;
+}
+
+.container {
+    margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: 0;
+}
+
+.gbtn {
+    text-transform:none!important;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.label {
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.gender {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.date {
+    margin: 0 auto;
+    border: 1px solid gray;
+    width: 225px;
+    height: 35px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+ion-input {
+    margin: 0 auto;
+    border: 1px solid gray;
+    text-align: center;
+    margin-top: 20px;
+}

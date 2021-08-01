@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-icon name="chevron-back-circle-outline" size="large" [routerLink]="['/signup']" routerDirection="back"></ion-icon>
+    </ion-buttons>
+    <ion-title><b>Goal</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="chevron-forward-circle-outline" size="large" [routerLink]="['/signup2']" routerDirection="forward"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="align-items: center;">
+  <div class="bars">
+    <div class="sel"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ion-item lines="none" style="text-align: center;">
+    <div class="container">
+      <ion-label><b>What is your goal?</b></ion-label>
+      <div class="buttons">
+        <ion-button (click)="lose()" class="btn"><b>Lose Weight</b></ion-button>
+        <ion-button (click)="maintain()" class="btn"><b>Maintain Weight</b></ion-button>
+        <ion-button (click)="gain()" class="btn"><b>Gain Weight</b></ion-button>
+      </div>
+    </div>
+  </ion-item>
+</ion-content>

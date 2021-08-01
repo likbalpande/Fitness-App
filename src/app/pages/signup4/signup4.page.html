@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-icon
+        name="chevron-back-circle-outline"
+        size="large"
+        [routerLink]="['/signup3']"
+        routerDirection="back"
+      ></ion-icon>
+    </ion-buttons>
+    <ion-title><b>You</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon
+        name="chevron-forward-circle-outline"
+        size="large"
+        [routerLink]="['/signup5']"
+        routerDirection="forward"
+      ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bars">
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ion-item lines="none" style="text-align: center;">
+    <div class="container">
+      <ion-label class="label"><b>Height</b></ion-label>
+      <ion-item lines="none">
+        <ion-input placeholder="in cm" type="number"></ion-input>
+      </ion-item>
+      <ion-label class="label"><b>Current Weight</b></ion-label>
+      <ion-item lines="none">
+        <ion-input placeholder="in Kg" type="number"></ion-input>
+      </ion-item>
+    </div>
+  </ion-item>
+</ion-content>

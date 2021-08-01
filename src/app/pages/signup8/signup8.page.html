@@ -1,0 +1,174 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title  class="heading">Your Notice Board</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" (click)="openCalModal()">
+        <ion-icon name="add" ></ion-icon>Add Event
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-row class="heading">
+    <ion-col size="0.75"></ion-col>
+    <!-- <ion-col size="5"> -->
+      <ion-button size="small" (click)="createRandomEvents()" fill="outline">
+        Add Random Events
+      </ion-button>
+    <!-- </ion-col>
+    <ion-col size="5"> -->
+      <ion-button size="small" (click)="removeEvents()" fill="outline">
+        Remove All Events
+      </ion-button>
+    <!-- </ion-col> -->
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col size="1.1"></ion-col>
+
+    <ion-col size="9.8" class="box1">
+         <ion-row>
+           <ion-col size="9">
+            <ion-label style="font-size: 20px;" class="header1">{{ viewTitle }}</ion-label>
+           </ion-col>
+
+           <ion-col size="3">
+            <ion-buttons>
+              <ion-button fill="outline" (click)="back()">
+                <ion-icon name="arrow-back" size="small" slot="icon-only"></ion-icon>
+              </ion-button>
+
+              <ion-button fill="outline" (click)="next()">
+                <ion-icon name="arrow-forward" size="small" slot="icon-only"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+           </ion-col>
+         </ion-row>
+     </ion-col>
+
+    <ion-col size="1.1">
+    </ion-col>
+
+  </ion-row>
+  <ion-row>
+  <ion-col size="1"></ion-col>
+  <ion-col size="10">
+  <calendar
+  [monthviewDisplayEventTemplate]="foo"
+  [eventSource]="eventSource"
+  [calendarMode]="calendar.mode"
+  [currentDate]="calendar.currentDate"
+
+  (onEventSelected)="openEventModal()"
+  (onTitleChanged)="onViewTitleChanged($event)">
+</calendar>
+<!-- (onEventSelected)="onEventSelected($event)" -->
+
+<ng-template #foo let-view="view" let-row="row" let-col="col">
+  <div [class.with-event]="view.dates[row*7+col].events.length">
+    {{view.dates[row*7+col].label}}
+    <div class="indicator-container">
+      <div class="event-indicator" *ngFor="let e of view.dates[row*7+col].events"></div>
+    </div>
+  </div>
+</ng-template>
+
+
+
+</ion-col>
+<ion-col size="1"></ion-col>
+</ion-row>
+
+<div class="bttmBox">
+  <div class="todayBox">
+      <h3 class="heading2">Today</h3>
+  </div>
+
+<ion-grid>
+  <ion-row class="heading">
+    <ion-col size="6">
+      <h3 class="title1"><strong><span style="color:rgb(73, 202, 73)">1,975</span></strong></h3>
+      <p class="title2"><strong>Calories Remaining</strong></p>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button [routerLink]="['/add1']" color="tertiary" size="small" (click)="openInputModal()">
+        <ion-icon name="add" ></ion-icon>
+        Calorie Input
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row style="height:5px;"></ion-row>
+  <ion-row class="heading">
+    <ion-col size="0.56"></ion-col>
+    <ion-col class="box3" size="2.75">
+      <h5 class="title1">1800</h5>
+      <p class="title2"><ion-icon name="body-outline"></ion-icon>Goal</p>
+    </ion-col>
+    <ion-col class="box4" size="2.75">
+      <h5 class="title1">0</h5>
+      <p class="title2"><ion-icon name="restaurant-outline"></ion-icon>Food</p>
+    </ion-col>
+    <ion-col class="box4" size="2.75">
+      <h5 class="title1">-175</h5>
+      <p class="title2"><ion-icon name="accessibility-outline"></ion-icon>Fitness</p>
+    </ion-col>
+    <ion-col class="box4" size="2.75">
+      <h5 class="title1">-175</h5>
+      <p class="title2"><ion-icon name="timer-outline"></ion-icon>Net</p>
+    </ion-col>
+    <ion-col size="0.44"></ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-row style="height:15px;"></ion-row>
+<div class="heading">
+<ion-chip outline style="width:70%; border-width:2px;" size="12">
+  <ion-label style="color:Black;">&nbsp;&nbsp;Move</ion-label>
+  <ion-label style="color:Black;" style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;175/210 KCAL</ion-label>
+</ion-chip>
+<ion-row style="height:15px;"></ion-row>
+<ion-chip outline style="width:70%; border-width:2px;" size="12">
+  <ion-label style="color:Black;">&nbsp;&nbsp;Exercise</ion-label>
+  <ion-label style="color:Black;" style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25/30 Min</ion-label>
+</ion-chip>
+<ion-row style="height:15px;"></ion-row>
+<ion-chip outline style="width:70%; border-width:2px;" size="12">
+  <ion-label style="color:Black;">&nbsp;&nbsp;Stand</ion-label>
+  <ion-label style="color:Black;" style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4/8 Hours</ion-label>
+</ion-chip>
+</div>
+
+</div>
+</ion-content>
+
+
+ <!-- <ion-segment [(ngModel)]="calendar.mode">
+    <ion-segment-button value="month">
+      <ion-label>Month</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="week">
+      <ion-label>Week</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="day">
+      <ion-label>Day</ion-label>
+    </ion-segment-button>
+  </ion-segment> -->
+
+  <!-- <ion-row class="heading">
+    <ion-col size="0.75"></ion-col>
+    <ion-col size="5">
+      <ion-button (click)="delete()" fill="outline">
+        Delete
+      </ion-button>
+    </ion-col>
+    <ion-col size="5">
+      <ion-button (click)="save()" fill="outline">
+        Save
+      </ion-button>
+    </ion-col>
+  </ion-row> -->

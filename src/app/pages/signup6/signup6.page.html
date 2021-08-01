@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-icon
+        name="chevron-back-circle-outline"
+        size="large"
+        [routerLink]="['/signup5']"
+        routerDirection="back"
+      ></ion-icon>
+    </ion-buttons>
+    <ion-title><b>You</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon
+        name="chevron-forward-circle-outline"
+        size="large"
+        [routerLink]="['/signup7']"
+        routerDirection="forward"
+      ></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bars">
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="sel"></div>
+    <div class="bar"></div>
+  </div>
+  <ion-item lines="none" style="text-align: center; width: 100%;">
+    <div class="container">
+      <ion-item lines="none" class="item1">
+        <ion-label position="fixed" class="label"><b>Email:</b></ion-label>
+        <ion-input type="email" placeholder="user1@xyz.com"></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="item2">
+        <ion-label position="fixed" class="label"><b>Password:</b></ion-label>
+        <ion-input type="password" placeholder="user12345"></ion-input>
+      </ion-item>
+      <ion-label class="label1"><b>Create a Username</b></ion-label>
+      <ion-input type="text" placeholder="User1" class="username"></ion-input>
+    </div>
+  </ion-item>
+</ion-content>
