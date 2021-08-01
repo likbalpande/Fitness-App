@@ -6,25 +6,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup2.page.scss'],
 })
 export class Signup2Page implements OnInit {
+  activityLevel: string;
+  color1: string;
+  color2: string;
+  color3: string;
+  color4: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  active1() {
-    console.log('active1');
+  activity(active: string) {
+    console.log(active);
+    this.activityLevel = active;
+    if(active === 'not very active'){
+      this.color1 = 'success';
+      this.color2 = 'white';
+      this.color3 = 'white';
+      this.color4 = 'white';
+    }
+    else if(active === 'lightly active'){
+      this.color1 = 'white';
+      this.color2 = 'success';
+      this.color3 = 'white';
+      this.color4 = 'white';
+    }
+    else if(active === 'active'){
+      this.color1 = 'white';
+      this.color2 = 'white';
+      this.color3 = 'success';
+      this.color4 = 'white';
+    }
+    else if(active === 'very active'){
+      this.color1 = 'white';
+      this.color2 = 'white';
+      this.color3 = 'white';
+      this.color4 = 'success';
+    }
   }
 
-  active2() {
-    console.log('active2');
-  }
-  
-  active3() {
-    console.log('active3');
-  }
-  
-  active4() {
-    console.log('active4');
-  }
 }

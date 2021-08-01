@@ -31,7 +31,10 @@ const routes: Routes = [
         path: 'add',
         loadChildren: () => import('../pages/add/add.module').then( m => m.AddPageModule)
       },
-
+      {
+        path: 'add1',
+        loadChildren: () => import('../pages/add1/add1.module').then( m => m.Add1PageModule)
+      },
       {
         path: 'alerts',
         loadChildren: () => import('../pages/alerts/alerts.module').then( m => m.AlertsPageModule)

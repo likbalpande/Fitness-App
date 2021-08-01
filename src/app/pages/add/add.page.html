@@ -16,14 +16,6 @@
 
 <ion-content>
 
-  <calendar
-  [eventSource]="eventSource"
-  [calendarMode]="calendar.mode"
-  [currentDate]="calendar.currentDate"
-  (onTitleChanged)="onViewTitleChanged($event)"
-  (onTimeSelected)="onTimeSelected($event)"
-  >
-</calendar>
   <!-- <ion-item>
     <ion-label position="stacked">Title</ion-label>
     <ion-input type="text" [(ngModel)]="event.title"></ion-input>
@@ -76,6 +68,7 @@
     <ion-col size="11.5">
 
 <calendar
+*ngIf="modalReady"
   [eventSource]="eventSource"
   [calendarMode]="calendar.mode"
   [currentDate]="calendar.currentDate"
@@ -104,10 +97,4 @@
     <ion-button color="secondary" (click)="save()" style="width: 40%;">Save</ion-button>
   </div>
 
-  <calendar
-  [currentDate]="calendar.currentDate"
-  (onTitleChanged)="onViewTitleChanged($event)"
-  (onTimeSelected)="onTimeSelected($event)"
-  >
-</calendar>
 </ion-content>

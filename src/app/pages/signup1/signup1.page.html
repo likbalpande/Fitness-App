@@ -24,9 +24,12 @@
     <div class="container">
       <ion-label><b>What is your goal?</b></ion-label>
       <div class="buttons">
-        <ion-button (click)="lose()" class="btn"><b>Lose Weight</b></ion-button>
-        <ion-button (click)="maintain()" class="btn"><b>Maintain Weight</b></ion-button>
-        <ion-button (click)="gain()" class="btn"><b>Gain Weight</b></ion-button>
+        <ion-radio-group>
+          
+        </ion-radio-group>
+        <ion-button [color]="color1" (click)="weight('lose')" class="btn"><b>Lose Weight</b></ion-button>
+        <ion-button [color]="color2" (click)="weight('maintain')" class="btn"><b>Maintain Weight</b></ion-button>
+        <ion-button [color]="color3" (click)="weight('gain')" class="btn"><b>Gain Weight</b></ion-button>
       </div>
     </div>
   </ion-item>

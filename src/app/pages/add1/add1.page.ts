@@ -12,8 +12,4 @@ export class Add1Page implements OnInit {
   ngOnInit() {
   }
 
-  trial(){
-    console.log('I AM HERE BRO!!!');
-  }
-
 }

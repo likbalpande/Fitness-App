@@ -2,8 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CalendarComponent } from 'ionic2-calendar';
 
-import { Add2Page } from '../add2/add2.page';
-import { EventEditPage } from '../event-edit/event-edit.page';
+import { AddPage } from '../add/add.page';
 
 @Component({
   selector: 'app-signup8',
@@ -37,10 +36,6 @@ export class Signup8Page implements OnInit {
   onViewTitleChanged(title){
     this.viewTitle = title;
   }
-
-  onEventSelected = (event) => {
-    console.log(event.title);
-};
 
 createRandomEvents() {
   var events = [];
@@ -85,7 +80,7 @@ removeEvents(){
 
 async openCalModal(){
   const modal = await this.modalCtrl.create({
-    component: Add2Page,
+    component: AddPage,
     cssClass: 'cal-modal',
     backdropDismiss: true
   });
@@ -116,17 +111,6 @@ async openCalModal(){
       this.myCal.loadEvents();
     }
   });
-}
-
-async openEventModal(){
-  const modal = await this.modalCtrl.create({
-    component: EventEditPage,
-    cssClass: 'cal-modal',
-    backdropDismiss: true
-  });
-
-  await modal.present();
-
 }
 
 }

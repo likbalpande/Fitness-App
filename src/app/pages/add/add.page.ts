@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CalendarComponent } from 'ionic2-calendar';
 
@@ -7,15 +7,13 @@ import { CalendarComponent } from 'ionic2-calendar';
   templateUrl: './add.page.html',
   styleUrls: ['./add.page.scss'],
 })
-export class AddPage implements AfterViewInit {
-  eventSource=[];
-  viewTitle: string;
+export class AddPage implements OnInit {
 
   calendar = {
     mode: 'month',
     currentDate:new Date()
   };
-
+  viewTitle: string;
   event = {
     title: '',
     desc: '',
@@ -31,7 +29,7 @@ modalReady = false;
 
   constructor(private modalCtrl: ModalController) { }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     setTimeout(()=>{
       this.modalReady=true;
     }, 0);

@@ -34,10 +34,10 @@
     <div class="container">
       <ion-label class="label"><b>How active are you?</b></ion-label>
     <div class="buttons">
-      <ion-button (click)="active1()" class="btn"><b>Not Very Active</b></ion-button>
-      <ion-button (click)="active2()" class="btn"><b>Lightly Active</b></ion-button>
-      <ion-button (click)="active3()" class="btn"><b>Active</b></ion-button>
-      <ion-button (click)="active4()" class="btn"><b>Very Active</b></ion-button>
+      <ion-button [color]="color1" (click)="activity('not very active')" class="btn"><b>Not Very Active</b></ion-button>
+      <ion-button [color]="color2" (click)="activity('lightly active')" class="btn"><b>Lightly Active</b></ion-button>
+      <ion-button [color]="color3" (click)="activity('active')" class="btn"><b>Active</b></ion-button>
+      <ion-button [color]="color4" (click)="activity('very active')" class="btn"><b>Very Active</b></ion-button>
     </div>
     </div>
   </ion-item>

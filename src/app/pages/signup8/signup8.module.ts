@@ -8,7 +8,6 @@ import { Signup8PageRoutingModule } from './signup8-routing.module';
 
 import { Signup8Page } from './signup8.page';
 import { NgCalendarModule } from 'ionic2-calendar';
-import { Add1PageModule } from '../add1/add1.module';
 
 @NgModule({
   imports: [
@@ -16,8 +15,7 @@ import { Add1PageModule } from '../add1/add1.module';
     FormsModule,
     IonicModule,
     Signup8PageRoutingModule,
-    NgCalendarModule,
-    Add1PageModule
+    NgCalendarModule
   ],
   declarations: [Signup8Page]
 })

@@ -34,11 +34,11 @@
     <div class="container">
       <ion-label class="label"><b>Height</b></ion-label>
       <ion-item lines="none">
-        <ion-input placeholder="in cm" type="number"></ion-input>
+        <ion-input [(ngModel)]="height" placeholder="in cm" type="number"></ion-input>
       </ion-item>
       <ion-label class="label"><b>Current Weight</b></ion-label>
       <ion-item lines="none">
-        <ion-input placeholder="in Kg" type="number"></ion-input>
+        <ion-input [(ngModel)]="weight" placeholder="in Kg" type="number"></ion-input>
       </ion-item>
     </div>
   </ion-item>

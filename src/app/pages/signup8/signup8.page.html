@@ -63,11 +63,8 @@
   [eventSource]="eventSource"
   [calendarMode]="calendar.mode"
   [currentDate]="calendar.currentDate"
-
-  (onEventSelected)="openEventModal()"
   (onTitleChanged)="onViewTitleChanged($event)">
 </calendar>
-<!-- (onEventSelected)="onEventSelected($event)" -->
 
 <ng-template #foo let-view="view" let-row="row" let-col="col">
   <div [class.with-event]="view.dates[row*7+col].events.length">
@@ -96,7 +93,7 @@
       <p class="title2"><strong>Calories Remaining</strong></p>
     </ion-col>
     <ion-col size="6">
-      <ion-button [routerLink]="['/add1']" color="tertiary" size="small" (click)="openInputModal()">
+      <ion-button color="tertiary" size="small" (click)="openInputModal()">
         <ion-icon name="add" ></ion-icon>
         Calorie Input
       </ion-button>
@@ -119,7 +116,7 @@
     </ion-col>
     <ion-col class="box4" size="2.75">
       <h5 class="title1">-175</h5>
-      <p class="title2"><ion-icon name="timer-outline"></ion-icon>Net</p>
+      <p class="title2"><ion-icon name=""></ion-icon>Net</p>
     </ion-col>
     <ion-col size="0.44"></ion-col>
   </ion-row>
@@ -133,7 +130,7 @@
 </ion-chip>
 <ion-row style="height:15px;"></ion-row>
 <ion-chip outline style="width:70%; border-width:2px;" size="12">
-  <ion-label style="color:Black;">&nbsp;&nbsp;Exercise</ion-label>
+  <ion-label style="color:Black;">&nbsp;&nbsp;Burnt</ion-label>
   <ion-label style="color:Black;" style="float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25/30 Min</ion-label>
 </ion-chip>
 <ion-row style="height:15px;"></ion-row>
@@ -158,6 +155,8 @@
       <ion-label>Day</ion-label>
     </ion-segment-button>
   </ion-segment> -->
+
+
 
   <!-- <ion-row class="heading">
     <ion-col size="0.75"></ion-col>

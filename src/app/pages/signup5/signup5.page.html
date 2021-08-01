@@ -34,11 +34,11 @@
     <div class="container">
       <ion-label class="label"><b>Goal Weight</b></ion-label>
       <ion-item lines="none">
-        <ion-input placeholder="in Kg" type="number"></ion-input>
+        <ion-input [(ngModel)]="goalWeight" placeholder="in Kg" type="number"></ion-input>
       </ion-item>
       <ion-label class="label" text-wrap><b>What is your weekly goal?</b></ion-label>
       <ion-item lines="none">
-        <ion-input placeholder="Gain 0.5 kg a week" type="number"></ion-input>
+        <ion-input [(ngModel)]="weeklyGoal" placeholder="Gain 0.5 kg a week" type="number"></ion-input>
       </ion-item>
     </div>
   </ion-item>

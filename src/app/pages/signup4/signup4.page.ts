@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup4.page.scss'],
 })
 export class Signup4Page implements OnInit {
-
+  height: number;
+  weight: number;
   constructor() { }
 
   ngOnInit() {
